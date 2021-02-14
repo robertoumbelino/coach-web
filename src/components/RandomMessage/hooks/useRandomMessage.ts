@@ -17,10 +17,10 @@ export const useRandomMessage = () => {
   /**
    * Get random phrase.
    */
-  const getRandomPhrase = async () => {
+  const fetchRandomPhrase = async () => {
     const response = await axios.get<IRandomMessageResponse>(BASE_URL)
     return response.data
   }
 
-  return { getRandomPhrase }
+  return { fetchRandomPhrase }
 }

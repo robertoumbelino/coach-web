@@ -20,7 +20,7 @@ const RandomMessage = () => {
   /**
    * Function to get a random phrase.
    */
-  const { getRandomPhrase } = useRandomMessage()
+  const { fetchRandomPhrase } = useRandomMessage()
 
   /**
    * States.
@@ -31,8 +31,8 @@ const RandomMessage = () => {
   })
 
   useEffect(() => {
-    getRandomPhrase().then(setRandomMessage)
-  }, [])
+    fetchRandomPhrase().then(setRandomMessage).catch(console.log)
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Container webImage={randomMessage.wallpaperWeb}>
