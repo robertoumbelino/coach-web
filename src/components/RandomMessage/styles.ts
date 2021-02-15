@@ -31,7 +31,7 @@ export const ContainerText = styled.div`
 
 export const Text = styled.p`
   color: #fff;
-  font-size: 64px;
+  font-size: 7vw;
 
   text-align: center;
 `
